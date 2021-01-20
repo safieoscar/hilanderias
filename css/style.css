@@ -1,0 +1,997 @@
+/*============= RESET STYLE =============
+FONTS:
+Body: font-family: 'Roboto', sans-serif;
+Nav: font-family: 'Pacifico', cursive;
+*/
+
+/*-- iPhone X Remove Gutters
+Ignore W3C Validation error for this style. --*/
+html {
+  padding: env(safe-area-inset);
+}
+
+/*-- Body Resets --*/
+body {
+  overflow-x: hidden;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #444;
+}
+
+/*--- Nav Scrolling Offset --*/
+.offset:before {
+  height: 4.1rem;
+  margin-top: -4.1rem;
+  content: "";
+  display: block;
+}
+
+/*-- Remove Blue Browser Outline Around Buttons in Chrome --*/
+a:focus,
+button:focus {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Pointer Cursor On Links & Buttons --*/
+a, .btn, button {
+  cursor: pointer!important;
+  transition: all 0.5s ease 0s;
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar {
+  padding: .2rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  min-height: 3.3rem;
+  transition: background-color 1s ease 0s;
+}
+.navbar-brand img {
+  height: 5rem;
+}
+.navbar-brand {
+  min-width: 10.3rem;
+}
+.custom-toggler-icon {
+  font-size: 1.6rem;
+}
+.navbar-nav.ml-auto .nav-link {
+  color: #444;
+  text-shadow: 0 0 .05rem white;
+  border-top: .15rem solid transparent;
+}
+.navbar-nav.ml-auto .nav-link.active,
+.navbar-nav.ml-auto .nav-link:hover {
+  color: #4385AB!important;
+  border-top: .15rem solid white;
+}
+.navbar-nav.ml-auto .nav-item {
+  padding: .5rem .2rem .5rem .2rem;
+}
+
+/*-- Navbar Solid --*/
+.navbar.solid {
+  background: rgba(255, 255, 255, 0.95)!important;
+  transition: background-color 1.5s ease 0s;
+}
+.navbar.solid .navbar-nav.ml-auto .nav-link.active,
+.navbar.solid .navbar-nav.ml-auto .nav-link:hover {
+  border-top: .15rem solid #444!important;
+}
+
+/*-- Navbar Social Icons --*/
+ul.social {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.social li {
+  display: inline;
+  padding-right: .1rem;
+}
+.social .nav-link {
+  padding: 0!important;
+}
+.navbar-nav.social .fa-stack {
+  margin-top: .4rem;
+  width: 2.5rem!important;
+}
+.navbar-nav.social a {
+  opacity: .7;
+}
+.navbar-nav.social a:hover,
+.navbar-nav.social a:active {
+  opacity: 1!important;
+}
+.fa-stack-1x {
+  color:white;
+  font-size: 1rem!important;
+  width: 1rem;
+}
+.fa-stack-2x {
+  font-size: .9rem!important;
+  width: 2rem;
+}
+.icon-facebook {
+  color:#0051ff;
+}
+.icon-twitter {
+  color:#00aced;
+}
+.icon-instagram {
+  color: #3C6F96;
+}
+.icon-youtube{
+  color:#C4302B;
+}
+
+/*============= IMG PLAY OVERLAY =============*/
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .75;
+  transition: all 2s ease;
+  background-color: tansparent;
+}
+.img-overlay:hover {
+  opacity: .75;
+  background-color: white;
+}
+.img-overlay .svg-inline--fa.fa-w-14 {
+  color: rgb(255, 255, 255);
+  font-size: 2.2rem;
+  position: absolute;
+  top: 45%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/*============= HOME LANDING =============*/
+
+.parallax-home {
+  height: 100vh;
+  background: linear-gradient(#ebebeb, #ffffff2c);
+}
+.home-text-wrap {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+}
+.home-text {
+  max-width: 32rem;
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+.home-text h1 {
+  font-family: 'Russo One', sans-serif;
+  color: black;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  text-shadow: 0 0 .2rem white;
+}
+.home-text img {
+  max-height: 30rem;
+}
+.bg-home {
+  background-color: #07080a;
+}
+.text-parallax {
+  color: #4385AB;
+}
+
+/*-- Button --*/
+.btn-md {
+  border-width: .1rem!important;
+  border-radius: 0;
+  padding: .6rem 1rem;
+  font-size: .9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+.btn-parallax {
+  border-color: #4385AB; /*-- ba3c4b EF8588 --*/
+  background-color: #4385AB;
+  color: white;
+}
+.btn-parallax:hover,
+.btn-parallax:focus {
+  border-color: #4385AB!important;
+  background-color: white;
+  color: black;
+}
+.btn-dark:hover,
+.btn-dark:focus {
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+
+/*--- Bouncing Down Arrow --*/
+.bounce { /*-- arrow bouncing duration-- */
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -.625rem;
+  width: 3.75rem;
+  height: 3.15rem; /*-- bounce height/distance --*/
+}
+a.down-arrow {
+  display: block;
+  color: white; /*arrow color*/
+}
+.down-arrow svg.svg-inline--fa {
+  opacity: .4; /*-- arrow bounce opacity --*/
+  font-size: 2.5rem; /*-- arrow icon size --*/
+  transition: .9s; /*-- opacity transition time --*/
+}
+.down-arrow svg.svg-inline--fa:hover {
+  opacity: 1; /*-- arrow hover opacity --*/
+}
+
+/*============= ABOUT =============*/
+
+/*-- About Three Column Icons --*/
+.about.svg-inline--fa {
+  font-size: 4.5rem;
+}
+.fa-html5 {
+  color: #FD7E14;
+}
+.fa-css3-alt {
+  color: #056DB4;
+}
+.fa-bootstrap {
+  color: #5F4686;
+}
+
+/*-- About Jumbotron/Title --*/
+.jumbotron {
+  background-color: #F8F8F8;
+  margin: 0!important;
+  padding: 2.5rem 0;
+  border-radius: 0;
+}
+.title {
+  font-family: 'Russo One', sans-serif;
+}
+.title-underline {
+  margin: 1rem auto 1.5rem;
+  width: 3rem;
+  height: .3rem;
+  background-color: #6FABCF;
+}
+.title-underline-left {
+  margin: 1rem 0;
+  width: 6rem;
+  height: .15rem;
+  background-color: #6FABCF;
+}
+img {
+  max-width: 100%;
+}
+
+/*-- About Parallax/Counter Up --*/
+.parallax-about {
+  max-height: 600px;
+  min-height: 600px;
+}
+.counter-text {
+  background-color: rgba(255, 255, 255, .7);
+  padding: 3rem 0 2.5rem!important;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+.skill .svg-inline--fa {
+  font-size: 4rem;
+  padding-bottom: .7rem;
+}
+.skill .fa-robot {
+  color: #d74b4e;
+}
+.skill .fa-coffee {
+  color: #8a5337;
+}
+.skill .fa-project-diagram {
+  color: #08aeac;
+}
+.skill .fa-tasks {
+  color: #3d597d;
+}
+.skill h2, .skill h5 {
+  text-decoration: uppercase;
+  font-family: 'Russo One', sans-serif;
+}
+
+/*============= PROJECT GALLERY FILTER / LIGHTBOX =============*/
+
+/*-- Project Gallery Menu --*/
+.gallery {
+  width: 100%!important;
+}
+.navbar.projects {
+  min-height: 1rem;
+  letter-spacing: .05rem;
+}
+.filter ul li {
+  padding: .5rem;
+}
+.filter ul li.filter-active a.nav-link.filter,
+a.filter.is-checked,
+li a.nav-link.filter.active,
+li a.nav-link.filter:hover {
+  background-color: #4385AB!important;
+  color: #fff!important;
+  cursor: pointer!important;
+}
+a.nav-link.filter {
+  padding-left: 1rem;
+}
+
+/*-- Project Gallery Layout --*/
+.element-item {
+  position: relative;
+  float: left;
+  width: 33%;
+  min-height: 14rem;
+  padding: .6rem;
+}
+.element-item img {
+  width: 100%;
+  margin-bottom: 1.5rem!important;
+  height: auto;
+  display:block;
+  transition: all 0.3s ease 0s;
+}
+.element-item a img:hover {
+  opacity: .7!important;
+  transition: all 0.3s ease 0s;
+}
+
+
+/*============= OUR DEVELOPERS =============*/
+
+.parallax-developers {
+  max-height: 780px;
+  min-height: 780px;
+}
+.card {
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  border-radius: .5rem;
+  padding: 1rem 0!important;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+  transition: transform .4s ease;
+  margin: 0 1rem;
+}
+.card:hover {
+  transform: scale(.95);
+}
+.card img {
+  border-radius: 50%;
+  max-width: 10rem;
+  max-height: 10rem;
+  margin: 0 auto;
+}
+.card-body {
+  margin-bottom: .3rem!important;
+  min-height: 14rem!important;
+}
+.card h4 {
+  font-weight: 700;
+}
+.card h5 {
+  color: #6FABCF;
+}
+.card p {
+  border-top: .1rem solid rgba(255, 255, 255, .2);
+  border-bottom: .1rem solid rgba(255, 255, 255, .2);
+  padding: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.card svg.svg-inline--fa {
+  color: #6FABCF!important;
+  font-size: 1.5rem;
+  width: 2rem;
+}
+.card svg.svg-inline--fa:hover {
+  color: white!important;
+}
+.owl-carousel, .owl-dots {
+  margin-top: 1.5rem!important;
+}
+.owl-dot.active span,
+.owl-dot:hover span {
+  background: #6FABCF!important;
+}
+
+/*============= REVIEWS =============*/
+
+.parallax-reviews {
+  margin: 0;
+  padding: 0!important;
+}
+.parallax-reviews .container-fluid {
+  margin: 0!important;
+  padding: 0!important;
+}
+.half-col-container-first {
+  max-width: 550px;
+  float: right;
+}
+.review-text {
+  background-color: rgba(255, 255, 255, .85);
+  border-radius: .5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+.bg-reviews {
+  background-color: rgba(255, 255, 255, .92);
+}
+.half-col-container {
+  max-width: 576px;
+}
+
+/*-- Reviews Carousel --*/
+#reviews-carousel .owl-carousel .owl-nav {
+  position: absolute;
+  top: 45%;
+  min-width: 100%!important;
+  max-width: 100%!important;
+}
+#reviews-carousel .owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  left: 0!important;
+  padding: .4rem 1rem!important;
+  border: .1rem solid black;
+  font-size: 1.3rem!important;
+  color: black;
+  opacity: .7;
+}
+#reviews-carousel .owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  right: 0!important;
+  padding: .4rem 1rem!important;
+  border: .1rem solid black;
+  font-size: 1.3rem!important;
+  color: black;
+  opacity: .7;
+}
+#reviews-carousel .owl-carousel .owl-nav button.owl-prev:hover,
+#reviews-carousel .owl-carousel .owl-nav button.owl-next:hover {
+  color: white;
+  background-color: black;
+}
+
+/*-- Reviews Carousel Content --*/
+#reviews-carousel img {
+ margin: 0 auto 1rem;
+ border-radius: 50%;
+ min-width: 200px;
+ max-width: 200px;
+}
+.review-separator {
+  margin: 1rem auto;
+  width: 13rem;
+  height: .05rem;
+  background-color: #6FABCF;
+}
+
+/*============= CONTACT MAP =============*/
+
+.parallax-map {
+  max-height: 400px;
+  min-height: 400px;
+  margin: 0;
+  padding: 0!important;
+}
+.parallax-map .container-fluid {
+   max-height: 400px!important;
+}
+.responsive-map{
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  opacity: .9;
+}
+.responsive-map iframe {
+  left: 0;
+  top: 0;
+  min-height: 400px;
+  max-height: 400px;
+  min-width: 100%;
+  position: absolute;
+}
+
+/*============= FOOTER =============*/
+
+footer {
+  background-color: #444;
+}
+footer img {
+  height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+footer a {
+  text-decoration: none!important;
+  color: white;
+}
+footer a:hover {
+  text-decoration: none!important;
+  color: white;
+}
+footer ul.social {
+  padding-bottom: 1.5rem;
+}
+footer ul.social li {
+  padding-right: .4rem;
+}
+footer .social a:hover {
+  color: #4385AB;
+  text-decoration: none;
+}
+footer .svg-inline--fa.fa-w-14 {
+  font-size: 1.6rem;
+  margin: 1.2rem .5rem 0 0;
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+footer svg.svg-inline--fa:hover {
+  color: #4385AB!important;
+}
+
+/*--- Contact Form --*/
+.form-group {
+  margin-bottom: 1.3rem;
+}
+.form-group.half {
+  width: 48%;
+  float: left;
+}
+.form-group.half.first {
+  margin-right: 4%;
+}
+.form-control {
+  background-color: #696969;
+  border-radius: 0;
+  border: .05rem solid #d9d9d9;
+  color: white!important;
+  font-size: 1.1rem;
+}
+.form-control:focus {
+  background: #696969;
+  border: .05rem solid #d9d9d9;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9f9f9f!important;
+}
+.btn-lg {
+  border-width: thin;
+  border-radius: 0;
+  padding: .8rem 1.2rem;
+  font-size: .9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+input.btn {
+  cursor: pointer;
+}
+.controls input:focus,
+.controls textarea:focus { /*-- Remove Element Outlines in Contact Form --*/
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*============= SOCKET =============*/
+
+.socket {
+  background-color: #363636;
+  width: 100%;
+}
+.socket a {
+  color: white;
+}
+
+/*============= TOP SCROLL =============*/
+
+.top-scroll svg.svg-inline--fa {
+  font-size: 3rem;
+  height: 1.7rem;
+  color: #53595f;
+  background: white;
+}
+a.top-scroll {
+  right: 1.2rem;
+  bottom: 1.2rem;
+  position: fixed;
+  opacity: .3;
+  z-index: 1000;
+  display: none;
+}
+a.top-scroll:hover {
+  opacity: .5;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 1200px (xl) */
+@media (max-width: 1199.98px) {
+  .element-item {
+    min-height: 12rem;
+  }
+}
+
+/* Devices under 992px (lg) */
+@media (max-width: 991.98px) {
+  /*-- Navbar --*/
+  .navbar-nav.ml-auto .nav-link,
+  .navbar.solid .navbar-nav.ml-auto .nav-link.active,
+  .navbar.solid .navbar-nav.ml-auto .nav-link:hover {
+    border: none!important;
+  }
+  .navbar-nav.ml-auto .nav-item {
+    padding: 0 1rem;
+  }
+  /*-- Home Content --*/
+  .parallax-home {
+    height: 100vh;
+  }
+  .home-text {
+    max-width: 26rem;
+    padding: 1.8rem 0 1.5rem!important;
+  }
+  .home-text h1 {
+    font-size: 2.5rem;
+    letter-spacing: .6rem;
+  }
+  .btn-lg {
+    padding: .6rem .8rem!important;
+    font-size: .9rem;
+    margin: .4rem!important;
+  }
+  .about-three-col {
+    text-align: center;
+  }
+  .about-three-col h4 {
+    padding: .55rem 0 .35rem;
+  }
+  .element-item {
+    width: 50%;
+    min-height: 12.6rem;
+  }
+  .half-col-container-first,
+  .half-col-container {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+/* Devices under 768px (md) */
+@media (max-width: 767.98px) {
+  .navbar-toggler {
+    width: 100%;
+  }
+  .custom-toggler-icon {
+    float: left;
+    padding-right: 2rem;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.3rem; }
+  h5 { font-size: 1.2rem; }
+  h6 { font-size: 1.1rem; }
+  p { font-size: 1.1rem; }
+  /*--- Nav Scrolling Offset --*/
+  .offset:before {
+    height: 3.5rem;
+    margin-top: -3.5rem;
+  }
+  .parallax-home {
+    height: 100vh;
+    min-height: 500px;
+  }
+  .home-text {
+    max-width: 23rem;
+    padding: 1.5rem 0 1.2rem!important;
+  }
+  .home-text h1 {
+    font-size: 2.2rem;
+    letter-spacing: .4rem;
+  }
+  .btn-lg {
+    padding: .5rem .7rem!important;
+    font-size: .9rem;
+    margin: .4rem!important;
+  }
+  .element-item {
+    width: 100%;
+    min-height: 14rem;
+  }
+  #reviews-carousel .owl-carousel .owl-nav button.owl-prev,
+  #reviews-carousel .owl-carousel .owl-nav button.owl-next {
+    display: none!important;
+  }
+  .top-scroll {
+    display: none!important;
+  }
+  .card-body {
+    min-height: 235px;
+  }
+}
+
+/* Devices under 576px (md) */
+@media (max-width: 575.98px) {
+  .navbar .container {
+    margin: 0 1rem;
+  }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.2rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 1rem; }
+  p { font-size: 1rem; }
+  /*--- Nav Scrolling Offset --*/
+  .offset:before {
+    height: 3.5rem;
+    margin-top: -3.5rem;
+  }
+  .parallax-home {
+    height: 100vh;
+  }
+  .home-text {
+    max-width: 20rem;
+    padding: 1.3rem 0 1.1rem!important;
+  }
+  .home-text h1 {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+  }
+  .btn-lg {
+    padding: .4rem .6rem!important;
+    font-size: .8rem;
+    margin: .1rem!important;
+  }
+  /*-- About Parallax --*/
+  .parallax-about {
+    max-height: 790px;
+    min-height: 790px;
+  }
+  /*-- Contact Form --*/
+  .form-group.half {
+    width: 100%;
+  }
+  .form-group.half.first {
+    margin-right: 0;
+  }
+  .card-body {
+    min-height: 260px!important;
+  }
+}
+
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+
+/*============= WAYPOINTS =============*/
+
+/*-- OPTION: TURN OFF ANIMATION OFF COMPLETELY::
+Note: may effect line progress bar with slight delay,
+line-progressbar waypoints can be adjusted at bottom of plugins.js.--*/
+
+
+/* remove this CSS comment to activate
+
+.animated, .os-animation {
+  -webkit-animation: none!important;
+  -moz-animation: none!important;
+  -o-animation: none!important;
+  animation: none!important;
+  opacity: 1!important;
+  -webkit-animation-delay: none !important;
+  -moz-animation-delay: none !important;
+  animation-delay: none !important;
+  }
+
+*/
+
+/*-- OPTION: TURN OFF ANIMATION ON MOBILE::
+Note: may effect line progress bar with slight delay,
+line-progressbar waypoints can be adjusted at bottom of plugins.js.--*/
+
+
+/* remove this CSS comment to activate
+
+@media (max-width: 767px) {
+	.animated, .os-animation {
+	  -webkit-animation: none!important;
+	  -moz-animation: none!important;
+	  -o-animation: none!important;
+	  animation: none!important;
+	  opacity: 1!important;
+	  -webkit-animation-delay: none !important;
+	  -moz-animation-delay: none !important;
+	  animation-delay: none !important;
+	  }
+	}
+
+*/
+
+
+/*--- Prevent WayPoints from Browser Window Scrolling On Mobile --*/
+/* Devices under 768px (md) */
+@media (max-width: 767px) {
+  .row {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+/*-- Don't modify waypoints CSS below,
+this is required for waypoints to work --*/
+.os-animation{
+  opacity: 0;
+  margin: 0!important;
+  max-width: 100%;
+}
+.os-animation.animated {
+  opacity: 1;
+}
+
+
+/*============= UNIVERSAL PARALLAX PLUGIN CSS =============*/
+
+.parallax-container {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px;
+  position: relative;
+  width: 100%
+}
+.parallax-container .parallax-content {
+  margin: 0 auto;
+  width: 100%;
+}
+.parallax__container {
+  clip: rect(0, auto, auto, 0);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100
+}
+.parallax__container .parallax {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%
+}
+
+
+/*-- Fix maps scroll issue --*/
+.scrolloff {
+  pointer-events: none;
+}
+
+/*-- Parallax Map Height Adjustment Queries --*/
+@media (max-width: 715px) {
+  .parallax-map {
+    max-height: 318px;
+    min-height: 318px;
+  }
+  .parallax-map .container-fluid {
+    max-height: 318px!important;
+  }
+  .responsive-map iframe {
+    min-height: 318px;
+    max-height: 318px;
+  }
+}
+@media (max-width: 610px) {
+  .parallax-map {
+    max-height: 280px;
+    min-height: 280px;
+  }
+  .parallax-map .container-fluid {
+    max-height: 280px!important;
+  }
+  .responsive-map iframe {
+    min-height: 280px;
+    max-height: 280px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 510px) {
+  .parallax-map {
+    max-height: 230px;
+    min-height: 230px;
+  }
+  .parallax-map .container-fluid {
+    max-height: 230px!important;
+  }
+  .responsive-map iframe {
+    min-height: 230px;
+    max-height: 230px;
+    max-width: 350px;
+  }
+}
+@media (max-width: 420px) {
+  .parallax-map {
+    max-height: 190px;
+    min-height: 190px;
+  }
+  .parallax-map .container-fluid {
+    max-height: 190px!important;
+  }
+  .responsive-map iframe {
+    min-height: 190px;
+    max-height: 190px;
+    max-width: 340px;
+  }
+}
+
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
